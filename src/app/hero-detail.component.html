@@ -1,0 +1,10 @@
+<h2>details!</h2>
+<div>
+    <div>
+        <label>id: </label>{{heroX?.id}}
+    </div>
+    <div>
+        <label>name: </label> <input [(ngModel)]="heroX.name" placeholder="name" />
+    </div>
+    <button (click)="select()">refresh</button> <button (click)="insert()">insert</button> <button (click)="update()">update</button> <button (click)="delete()">delete</button>
+</div>
