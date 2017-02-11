@@ -1,4 +1,4 @@
-<h2>details!</h2>
+<h3>Hero detail information</h3>
 <div>
     <div>
         <label>id: </label>{{heroX?.id}}
@@ -6,5 +6,9 @@
     <div>
         <label>name: </label> <input [(ngModel)]="heroX.name" placeholder="name" />
     </div>
-    <button (click)="select()">refresh</button> <button (click)="insert()">insert</button> <button (click)="update()">update</button> <button (click)="delete()">delete</button>
+    <br/>
+    <button md-button (click)="select()">refresh</button>
+    <button md-button (click)="insert()">insert</button>
+    <button md-button (click)="update()">update</button>
+    <button md-button (click)="delete()">delete</button>
 </div>

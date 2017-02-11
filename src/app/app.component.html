@@ -1,7 +1,9 @@
+<app-hero-detail>
+</app-hero-detail>
+
 <h1>{{title}}</h1>
-<app-hero-detail></app-hero-detail>
-<nav>
-    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
-</nav>
+<div>
+    <a md-raised-button routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a md-raised-button routerLink="/heroes" routerLinkActive="active">Heroes</a>
+</div>
 <router-outlet></router-outlet>
