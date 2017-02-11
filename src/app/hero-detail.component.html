@@ -1,14 +1,24 @@
-<h3>Hero detail information</h3>
-<div>
-    <div>
+<md-card>
+    <md-toolbar color="accent"> Hero detail information </md-toolbar>
+    <md-input-container>
+        <input md-input placeholder="id: " [(ngModel)]="heroX.id" disabled>
+    </md-input-container>
+    <md-input-container>
+        <input md-input placeholder="name: " [(ngModel)]="heroX.name">
+    </md-input-container>
+
+    <!--<div>
         <label>id: </label>{{heroX?.id}}
     </div>
     <div>
         <label>name: </label> <input [(ngModel)]="heroX.name" placeholder="name" />
+    </div>-->
+
+    <!--<md-divider></md-divider>-->
+    <div>
+        <button md-raised-button (click)="select()">refresh</button>
+        <button md-raised-button (click)="insert()">insert</button>
+        <button md-raised-button (click)="update()">update</button>
+        <button md-raised-button (click)="delete()">delete</button>
     </div>
-    <br/>
-    <button md-button (click)="select()">refresh</button>
-    <button md-button (click)="insert()">insert</button>
-    <button md-button (click)="update()">update</button>
-    <button md-button (click)="delete()">delete</button>
-</div>
+</md-card>

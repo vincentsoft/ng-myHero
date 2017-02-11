@@ -1,10 +1,13 @@
-<h2>My Heroes</h2> <label *ngIf="selectedHero"> {{selectedHero.name | uppercase}} selected </label>
-
-<ul class="heroes">
-    <li *ngFor="let hero of heroService.heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
-        <button>
-            <span>{{hero.id}}</span> <span>{{hero.name}}</span>
-        </button>
-    </li>
-</ul>
-<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+<md-card>
+    <p class="error" *ngIf="errorMessage">
+        {{errorMessage}}
+    </p>
+    <md-list>
+        <md-list-item *ngFor="let hero of heroService.heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+            <!--<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}">-->
+            {{hero.id}}
+            <h2 md-line>{{hero.name}}</h2>
+        </md-list-item>
+        <md-divider></md-divider>
+    </md-list>
+</md-card>

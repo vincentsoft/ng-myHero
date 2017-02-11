@@ -1,9 +1,11 @@
-<app-hero-detail>
-</app-hero-detail>
+<app-hero-detail></app-hero-detail>
 
-<h1>{{title}}</h1>
-<div>
-    <a md-raised-button routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-    <a md-raised-button routerLink="/heroes" routerLinkActive="active">Heroes</a>
-</div>
-<router-outlet></router-outlet>
+<md-toolbar> {{title}} </md-toolbar>
+<md-tab-group>
+    <md-tab label="Heroes Dashboard">
+        <app-dashboard></app-dashboard>
+    </md-tab>
+    <md-tab label="Heroes List">
+        <app-heroes></app-heroes>
+    </md-tab>
+</md-tab-group>
