@@ -2,7 +2,7 @@
     <p class="error" *ngIf="errorMessage">
         {{errorMessage}}
     </p>
-    <md-list>
+    <md-list dense>
         <md-list-item *ngFor="let hero of heroService.heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
             <!--<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}">-->
             {{hero.id}}
