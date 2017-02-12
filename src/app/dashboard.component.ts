@@ -5,7 +5,7 @@ import { Hero } from './hero';
 @Component({
   moduleId: module.id,
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
+  templateUrl: './dashboard.component.html'
   // styleUrls: ['./dashboard.component.css']
 }) export class DashboardComponent {
   selectedHero: Hero;
@@ -13,5 +13,5 @@ import { Hero } from './hero';
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
     this.heroService.showDetail(hero);
-  }
+  };
 }

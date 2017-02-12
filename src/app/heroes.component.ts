@@ -7,14 +7,14 @@ import { HeroService } from './hero.service';
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   // styleUrls: ['./heroes.component.css'],
-  styles: [`md-list-item:hover {background:#e2e2e2;}`
+  styles: [`md-list-item:hover {background:#DDD;}`
   ]
 }) export class HeroesComponent {
   selectedHero: Hero;
   constructor(private heroService: HeroService) {
-  }
+  };
   onSelect(hero: Hero) {
     this.selectedHero = hero;
     this.heroService.showDetail(hero);
-  }
+  };
 }
