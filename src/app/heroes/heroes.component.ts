@@ -6,9 +6,9 @@ import { HeroService } from '../hero.service';
   moduleId: module.id,
   selector: 'app-heroes',
   templateUrl: 'heroes.component.html',
-  // styleUrls: ['./heroes.component.css'],
-  styles: [`md-list-item:hover {background:#DDD;}`
-  ]
+  styles: [`
+    md-list-item:hover {background:#DDD;}
+  `]
 }) export class HeroesComponent {
   selectedHero: Hero;
   constructor(private heroService: HeroService) {

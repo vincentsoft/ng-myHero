@@ -35,39 +35,26 @@ import { Hero } from './hero';
       }
     });
     this.select();
-  }
+  };
   send(text: string) {
     this.ws.next(text);
-  }
+  };
   showDetail(hero: Hero) {
     this.subjectHeroDetail.next(hero);
-  }
+  };
   select() {
     this.send(`{"jsonrpc":"2.0","method":"select","params":{},"id":1}`);
-  }
+  };
   select_id(id: number) {
     this.send(`{"jsonrpc":"2.0","method":"select","params":{"id":${id}},"id":1}`);
-  }
+  };
   insert(name: string) {
     this.send(`{"jsonrpc":"2.0","method":"insert","params":{"name":"${name}"},"id":1}`);
   }
   update(hero: Hero) {
     this.send(`{"jsonrpc":"2.0","method":"update","params":{"id":${hero.id},"name":"${hero.name}"},"id":1}`);
-  }
+  };
   delete(hero: Hero) {
     this.send(`{"jsonrpc":"2.0","method":"delete","params":{"id":${hero.id}},"id":1}`);
-  }
-  // private handleError (error: Response | any) {
-  //     // In a real world app, we might use a remote logging infrastructure
-  //     let errMsg: string;
-  //     if (error instanceof Response) {
-  //         const body = error.json() || '';
-  //         const err = body.error || JSON.stringify(body);
-  //         errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
-  //     } else {
-  //         errMsg = error.message ? error.message : error.toString();
-  //     }
-  //     console.error(errMsg);
-  //     return Observable.throw(errMsg);
-  // }
+  };
 }

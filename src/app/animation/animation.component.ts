@@ -3,7 +3,6 @@ import { Component, trigger, state, style, transition, animate, keyframes } from
 @Component({
   selector: 'app-animation',
   templateUrl: './animation.component.html',
-  styleUrls: ['./animation.component.css'],
   animations: [
     trigger('focusPanel', [
       state('inactive', style({

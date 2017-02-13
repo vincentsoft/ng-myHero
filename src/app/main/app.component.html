@@ -1,17 +1,18 @@
 <app-hero-detail></app-hero-detail>
-
-<md-toolbar> {{title}} </md-toolbar>
-<md-tab-group (selectChange)="selectChange($event)">
-    <md-tab label="Heroes Dashboard">
-        <app-dashboard></app-dashboard>
-    </md-tab>
-    <md-tab label="Heroes List">
-        <app-heroes></app-heroes>
-    </md-tab>
-    <md-tab label="Animation">
-        <app-animation></app-animation>
-    </md-tab>
-    <md-tab label="Live Table">
-        <app-live-tab></app-live-tab>
-    </md-tab>
-</md-tab-group>
+<md-card>
+    <md-toolbar color="accent"> {{title}} </md-toolbar>
+    <md-tab-group (selectChange)="selectChange($event)">
+        <md-tab label="Heroes Dashboard">
+            <app-dashboard></app-dashboard>
+        </md-tab>
+        <md-tab label="Heroes List">
+            <app-heroes></app-heroes>
+        </md-tab>
+        <md-tab label="Animation">
+            <app-animation></app-animation>
+        </md-tab>
+        <md-tab label="Live Table">
+            <app-live-tab></app-live-tab>
+        </md-tab>
+    </md-tab-group>
+</md-card>

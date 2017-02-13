@@ -1,11 +1,6 @@
 <div>
-    <h3>
-        <small>
-        <button md-raised-button disabled="{{btnXStart}}" (click)="start()">Start</button> <button md-raised-button disabled="{{btnXStop}}" (click)="stop()">Stop</button>  
-        <!--<a href="#" (click)="add()">Add</a> |
-        <a href="#" (click)="remove()">Remove</a>-->
-      </small>
-    </h3>
+    <button md-raised-button disabled="{{isActive}}" (click)="doActive(true)">Start</button>
+    <button md-raised-button disabled="{{!isActive}}" (click)="doActive(false)">Stop</button>
     <ngx-datatable class="material" [headerHeight]="50" [limit]="5" [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'auto'" [trackByProp]="'updated'" [rows]="rows">
         <ngx-datatable-column name="Name"></ngx-datatable-column>
         <ngx-datatable-column name="Gender"></ngx-datatable-column>

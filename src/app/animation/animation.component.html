@@ -1,11 +1,4 @@
-<div class="row">
-    <div class="columns">
-        <button md-raised-button (click)="toggleMove()">Press me for animation</button>
-    </div>
-
-    <div class="columns">
-
-        <button id="content" [@focusPanel]='state' [@movePanel]='state'>Look at me animate</button>
-
-    </div>
-</div>
+<span>
+    <button md-raised-button (click)="toggleMove()">Press me for animation</button>
+</span>
+<div id="content" align="center" [@focusPanel]='state' [@movePanel]='state'>Look at me animate</div>

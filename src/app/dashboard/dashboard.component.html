@@ -1,9 +1,7 @@
 <md-card>
     <md-grid-list cols="4" gutterSize="4px" rowHeight="100px">
         <md-grid-tile *ngFor="let hero of heroService.heroes" [style.background]="'lightblue'" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
-            <div><button md-button>
-        {{hero.name}}
-        </button></div>
+            <div><button md-button> {{hero.name}} </button></div>
         </md-grid-tile>
     </md-grid-list>
 </md-card>

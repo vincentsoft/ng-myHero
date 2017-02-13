@@ -6,20 +6,9 @@ import { Hero } from '../hero';
 @Component({
   moduleId: module.id,
   selector: 'app-hero-detail',
-  templateUrl: 'hero-detail.component.html',
-  styles: [`
-button:hover {
-    background-color: #cfd8dc;
-}
-button:disabled {
-    background-color: #eee;
-    color: #ccc;
-    cursor: auto;
-}`]
-  // styleUrls: ['./hero-detail.component.css']
+  templateUrl: 'hero-detail.component.html'
 }) export class HeroDetailComponent {
   @Input() heroX: Hero = { 'id': null, 'name': '' };
-
   constructor(private heroService: HeroService) {
     heroService.subjectHeroDetail.subscribe((phero: Hero) => { this.heroX = phero; });
   };
