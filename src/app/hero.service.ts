@@ -8,7 +8,8 @@ import { Hero } from './hero';
   ws: any;
   heroes: Hero[];
   subjectHeroDetail = new Subject<Hero>();
-
+  tabactive = 1;
+  subjectTab = new Subject();
   constructor() {
     this.ws = WebSocketSubject.create('ws://127.0.0.1/jHeroes');
     this.ws.subscribe((o) => {

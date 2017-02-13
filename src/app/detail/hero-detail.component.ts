@@ -1,17 +1,16 @@
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HeroService } from './hero.service';
-import { Hero } from './hero';
+import { HeroService } from '../hero.service';
+import { Hero } from '../hero';
 
 @Component({
   moduleId: module.id,
   selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html',
+  templateUrl: 'hero-detail.component.html',
   styles: [`
 button:hover {
     background-color: #cfd8dc;
 }
-
 button:disabled {
     background-color: #eee;
     color: #ccc;
